@@ -1,0 +1,32 @@
+
+Sintaks Class di JSX vs HTML:
+
+Di HTML, kita pakai atribut class untuk menentukan kelas elemen.
+Di JSX, kita pakai className, karena "class" adalah kata kunci di JavaScript.
+Contoh:
+HTML: <div class="container"></div>
+JSX: <div className="container"></div>
+
+Di HTML, beberapa elemen bisa ditulis tanpa tag penutup, seperti <img> atau <input>.
+Di JSX, semua tag harus memiliki penutup. Jadi, elemen seperti <img> harus ditulis sebagai self-closing: <img />.
+Contoh:
+HTML: <img src="image.png">
+JSX: <img src="image.png" />
+
+Di JSX, kita bisa menyisipkan ekspresi JavaScript di dalam elemen menggunakan kurung kurawal ({}).
+Di HTML, kita tidak bisa langsung memasukkan ekspresi JavaScript.
+Contoh:
+JSX: <h1>{2 + 2}</h1> akan menampilkan "4" di halaman.
+HTML: Ini nggak bisa dilakukan langsung di HTML biasa.
+
+Di HTML, kita bisa pakai atribut style dengan string biasa.
+Di JSX, style harus berupa objek JavaScript, dengan penulisan properti menggunakan camelCase (contoh: background-color jadi backgroundColor).
+contoh: 
+HTML: <div style="background-color: red;"></div>
+JSX : <div style={{ backgroundColor: 'red' }}></div>
+
+Di HTML, event seperti klik di-handle dengan atribut seperti onclick.
+Di JSX, event handler ditulis dalam camelCase, seperti onClick, dan kita mengoper fungsi JavaScript, bukan string.
+contoh:
+HTML: <button onclick="handleClick()">Click me</button>
+JSX : <button onClick={handleClick}>Click me</button>
